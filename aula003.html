@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu primeiro programa</title>
+    <title>Meu segundo programa</title>
     <style>
         body {
             background-color: rgb(105, 105, 173);
@@ -19,9 +19,14 @@
 
     <script>
         
-        var nome = window.prompt("Qual é o seu nome?") //Vai perguntar o meu nome
+        var n1 = Number(window.prompt("Digite um número"));
+        var n2 = Number(prompt("Digite outro número"));
 
-        alert("É um grande prazer te conhecer " + nome + "!");
+        var s = n1 + n2;
+
+        alert(`A soma entre ${n1} e ${n2} é ${s}`);
+
+
     </script>
 </body>
 </html>
