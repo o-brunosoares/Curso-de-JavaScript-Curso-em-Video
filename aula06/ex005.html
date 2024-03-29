@@ -20,10 +20,26 @@
 
     <p>Aprendendo <strong>DOM</strong> em JavaScript.</p>
 
-    <div>Clique em mim</div>
+    <div id="msg">Clique em mim</div>
 
     <script>
-        var p1 = window.document.getElementsByTagName('p')[0]
+
+      // Seleção de elementos por marca (tag name)
+
+        var p1 = window.document.getElementsByTagName('p')[1]
+
+        document.write(p1.innerText)
+
+        // Seleção de elementos por ID (By Id)
+
+        var d = document.getElementById('msg')
+
+        d.style.background= 'green'
+
+        d.innerText = 'Estou aguardando'
+
+
+        // Seleção de elementos por nome (By Nsme)
     </script>
   </body>
 </html>
