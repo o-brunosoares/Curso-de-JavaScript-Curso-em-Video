@@ -23,13 +23,12 @@
 
     <script>
         
-        var n1 = Number(window.prompt("Digite um número"));
-        var n2 = Number(prompt("Digite outro número"));
+        var n1 = Number.parseInt(prompt("Digite um número: "));
+        var n2 = Number.parseInt(prompt("Digite outro número: "));
 
-        var s = n1 + n2;
+        s = n1 + n2;
 
-        alert(`A soma entre ${n1} e ${n2} é ${s}`);
-
+        alert("A soma dos valores é " + s);
 
     </script>
 </body>
