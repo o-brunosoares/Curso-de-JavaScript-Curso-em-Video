@@ -1,45 +1,94 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Primeiros passos com DOM</title>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primeiros passos com DOM</title>
+  <style>
+    body {
+      background: rgb(68, 125, 199);
+      color: #FFF;
+      font: normal 18pt Arial;
+    }
 
-    <style>
-      body {
-        background: rgb(68, 125, 199);
-        color: #fff;
-        font: normal 18pt Arial;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Iniciando estudos com DOM</h1>
+    #area {
+      width: 200px;
+      height: 200px;
+      background: red;
+      line-height: 200px;
+      text-align: center;
+    }
 
-    <p>Aqui vai o resultado.</p>
+  </style>
+</head>
+<body>
+  <h1>Iniciando os estudos com DOM</h1>
 
-    <p>Aprendendo <strong>DOM</strong> em JavaScript.</p>
+  <p>Aqui vai o resultado</p>
 
-    <div id="msg">Clique em mim</div>
+  <p>Aprendendo a usar o <strong>DOM</strong> &#40;<strong>D</strong>ocument <strong>O</strong>bject <strong>M</strong>odel&#41; em JavaScript</p>
 
-    <script>
+  <div>Clique em mim</div>
 
-      // Seleção de elementos por marca (tag name)
+  <h2>Seletores</h2>
+  <ul>
+    <li>
+      <h3>Por marca</h3>
+      <code><em>getElementsByTagName()</em></code>
+      <div>Mensagem</div>
+    </li>
 
-        var p1 = window.document.getElementsByTagName('p')[1]
+    <li>
+      <h3>Por ID</h3>
+      <code><em>getElementById()</em></code>
+      <div id="msg">Mensagem</div>
+    </li>
 
-        document.write(p1.innerText)
+    <li>
+      <h3>Por nome</h3>
+      <code><em>getElementsByName()</em></code>
+      <div name=msg1>Mensagem</div>
+    </li>
 
-        // Seleção de elementos por ID (By Id)
+    <li>
+      <h3>Por classe</h3>
+      <code><em>getElementsByClassName()</em></code>
+      <div class="msg2">Mensagem</div>
+    </li>
 
-        var d = document.getElementById('msg')
+    <li>
+      <h3>Por Seletor (CSS)</h3>
+      <code><em>querySelector()</em> e <em>querySelectorAll()
+      </em></code>
+      <div class="estilo">Mensagem</div>
+    </li>
+  </ul>
 
-        d.style.background= 'green'
+  <script>
+    let corpo = document.body
+    let p1 = document.getElementsByTagName('div')[1]
+    p1.innerHTML = '<strong>Seleção por nome de tags.</strong>'
 
-        d.innerText = 'Estou aguardando'
+   let a = document.getElementById('msg')
+   a.style.background = 'green'
+   a.innerText = 'Estou aguardando...'
 
+   let b = document.getElementsByName('msg1')[0]
 
-        // Seleção de elementos por nome (By Name)
-    </script>
-  </body>
+   b.innerText = 'Olá Mundo!'
+
+   let c = document.getElementsByClassName('msg2')[0]
+
+   c.innerText = 'Seleção por classe.'
+   c.style.background = 'cyan'
+   c.style.color = 'black'
+
+   let d = document.querySelector('.estilo')
+
+   d.style.color = 'cyan'
+   d.style.background = 'black'
+   
+  </script>
+
+</body>
 </html>
