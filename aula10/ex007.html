@@ -43,11 +43,11 @@
         function somar() {
             let tn1 = document.getElementsByName('txtn1')[0]
             let tn2 = document.querySelector('#txtn2')
-            var res = document.getElementById('res')
+            let res = document.getElementById('res')
             let n1 = Number(tn1.value)
             let n2 = Number(tn2.value)
-            var s = n1 + n2
-            res.innerHTML = `A soma entre ${n1} e ${n2} é ${s}.`
+            let s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é <strong>${s}</strong>.`
         }
     </script>
 </body>
