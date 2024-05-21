@@ -48,6 +48,15 @@
             let n2 = Number(tn2.value)
             let s = n1 + n2
             res.innerHTML = `A soma entre ${n1} e ${n2} é <strong>${s}</strong>.`
+
+            let parOuImpar = s % 2;
+
+            if (parOuImpar == 0) {
+                res.innerHTML = `A soma entre ${n1} e ${n2} é <strong>${s}</strong>. O resultado é par.`
+            } else {
+                res.innerHTML = `A soma entre ${n1} e ${n2} é <strong>${s}</strong>. O resultado é ímpar.`
+            }
+
         }
     </script>
 </body>
