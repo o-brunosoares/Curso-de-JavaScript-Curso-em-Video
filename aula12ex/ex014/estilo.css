@@ -31,6 +31,10 @@ footer {
     text-shadow: 3px 3px 8px #000000;
 }
 
+footer a {
+    color: #FFF;
+}
+
 header, footer {
     color: #FFF;
     text-align: center;
