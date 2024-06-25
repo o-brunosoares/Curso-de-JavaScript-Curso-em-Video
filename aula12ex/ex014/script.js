@@ -1,25 +1,27 @@
 function carregar() {
-    var msg = document.getElementById('msg');
-    var img = document.getElementById('imagem');
+    // Seleção por Query Selector
+    var msg = document.querySelector('#msg');
+    var img = document.querySelector('#imagem');
     var data = new Date();
     var hora = data.getHours();
+
     msg.innerHTML = `Agora são <strong>${hora} horas</strong>.`;
 
     if (hora >= 6 && hora < 12) {
-        document.body.style.background = '#FED642'
+        msg.innerHTML = `Bom dia! ${msg.innerHTML}`
         img.src = 'images/dia-250.png'
-        msg.innerHTML = 'Bom dia! ' + msg.innerHTML;
+        document.body.style.backgroundColor = '#FED642'
     } else if (hora >= 12 && hora < 18) {
-        document.body.style.background = '#FC7F05'
+        msg.innerHTML = `Boa tarde! ${msg.innerHTML}`
         img.src = 'images/tarde-250.png'
-        msg.innerHTML = 'Boa tarde! ' + msg.innerHTML;
+        document.body.style.backgroundColor = '#FC7F05'
     } else if (hora >= 18 && hora < 20) {
-        document.body.style.background = '#862B5B'
+        msg.innerHTML = `Boa noite! ${msg.innerHTML}`
         img.src = 'images/noite-250.png'
-        msg.innerHTML = 'Boa noite! ' + msg.innerHTML;
+        document.body.style.backgroundColor = '#862B5B'
     } else {
-        document.body.style.background = '#041C3B'
+        msg.innerHTML = `Boa noite! ${msg.innerHTML}`
         img.src = 'images/noite-madrugada-250.png'
-        msg.innerHTML = 'Boa noite! ' + msg.innerHTML;
+        document.body.style.backgroundColor = '#041C3B'
     }
 }
