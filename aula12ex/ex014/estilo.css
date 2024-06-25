@@ -3,6 +3,12 @@ body {
     font: normal 15pt Arial;
 }
 
+header {
+    > h1 {
+        text-shadow: 3px 3px 3px #00000057;
+    }
+}
+
 section {
     background-color: #FFF;
     border-radius: 10px;
@@ -10,10 +16,19 @@ section {
     width: 500px;
     margin: auto;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, .363);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    > div {
+        padding: 8px;
+    }
 }
 
 footer {
     font-style: italic;
+    text-shadow: 3px 3px 8px #000000;
 }
 
 header, footer {
