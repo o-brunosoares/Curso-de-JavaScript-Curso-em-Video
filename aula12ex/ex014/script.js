@@ -58,3 +58,7 @@ function troca() {
         document.body.style.backgroundColor = '#041C3B'
     }
 }
+
+function recarregar() {
+    carregar()
+}
