@@ -18,6 +18,16 @@
         <div id="foto">
             <img src="images/dia-250.png" alt="Foto de manhã" id="imagem">
         </div>
+
+        <div id="alternativo">
+            <h4 id="tempo2">Você quer alterar o horário? Preencha o campo embaixo.</h4>
+            <label for="time">Digite somente as horas ao lado: </label>
+            <input type="number" name="time" id="time" max="23">
+            <br>
+            <input type="button" value="Trocar horário" onclick="troca()">
+
+            <p id="res"></p>
+        </div>
     </section>
 
     <footer>
