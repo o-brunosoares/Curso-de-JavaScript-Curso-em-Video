@@ -28,27 +28,27 @@
 </head>
 <body>
     <h1>Nacionalidade</h1>
-    <p>Insira aqui o país em que você se encontra:</p> <input type="text" name="nacionalidade" id="nacionalidade"> <br>
-    <input type="button" value="Verificar" onclick="verificar()">
+
+    <p>Insira seu país de nascimento: <input type="text" name="pais" id="pais"></p>
+    <input type="button" value=" Verificar" onclick="verificar()">
+
     <div id="res"></div>
 
     <script>
-
         function verificar() {
-            let nacionalidade = document.getElementsByName('nacionalidade')[0]
-            let pais = nacionalidade.value
-            let res = document.getElementById('res')
+            var nacionalidade = document.getElementById("pais");
+            var res = document.querySelector("#res");
+            var pais = nacionalidade.value;
 
-            res.innerHTML = `Sua localização atual é <strong>${pais}</strong>.`
+            // Colocando "toUpperCase", se o usuário escrever o nome do país com letras minúsculas ou maiúsculas o resultado será o mesmo.
+            res.innerHTML = `Seu país de origem é ${pais.toUpperCase()}.`
 
-            // Eu coloquei um "ou" (||) caso o usuário escreva o nome do país "Brasil" com a inicial minúscula.
-            if (pais == 'Brasil' || 'brasil') {
-                res.innerHTML += '<br>Você é brasileiro.'
+            if (pais.toUpperCase() == "BRASIL") {
+                res.innerHTML += '<br> Você é brasileiro.'
             } else {
-                res.innerHTML += '<br>Você é estrangeiro.'
+                res.innerHTML += '<br> Você é estrangeiro.'
             }
         }
-
     </script>
 </body>
 </html>
