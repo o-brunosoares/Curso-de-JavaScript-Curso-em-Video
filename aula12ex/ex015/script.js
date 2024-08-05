@@ -25,6 +25,8 @@ function verificar() {
             } else if (idade < 50) {
                 img.setAttribute('src', 'images/homem.png')
             } else {
+                genero = 'senhor'
+                res.innerHTML = `Detectamos um ${genero} de ${idade} anos.`
                 img.setAttribute('src', 'images/idoso.png')
             }
         } else {
@@ -41,6 +43,8 @@ function verificar() {
             } else if (idade < 50) {
                 img.setAttribute('src', 'images/mulher.png')
             } else {
+                genero = 'senhora'
+                res.innerHTML = `Detectamos uma ${genero} de ${idade} anos.`
                 img.setAttribute('src', 'images/idosa.png')
             }
         }
