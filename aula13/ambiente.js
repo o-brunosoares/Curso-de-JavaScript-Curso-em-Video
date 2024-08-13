@@ -1,5 +1,7 @@
 var contador = 1;
 
+// ESTRUTURA DE REPETIÇÃO COM TESTE LÓGICO COM TESTE NO FINAL
+
 do {
     console.log(`Passo ${contador}`)
     contador++
@@ -9,6 +11,9 @@ do {
 
 
 /*
+
+ESTRUTURA DE REPETIÇÃO COM TESTE LÓGICO NO INÍCIO
+
 while(contador <= 50) {
     console.log(`Passo ${contador}`)
     contador++
