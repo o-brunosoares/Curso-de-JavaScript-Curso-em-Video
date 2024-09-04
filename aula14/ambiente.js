@@ -10,3 +10,4 @@ do {
     console.log(`Passo ${d}`)
     d++
 } while (d <= 6)
+console.log("Fim!")
