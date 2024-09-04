@@ -8,5 +8,5 @@ console.log("Laço de repetição com teste lógico no final.")
 let d = 1;
 do {
     console.log(`Passo ${d}`)
-    d++
+    c++
 } while (d <= 6)
